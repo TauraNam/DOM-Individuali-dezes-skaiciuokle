@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 30px;
+    padding: 0;
+}
+
+body {
+    background-color:rgb(251, 243, 235);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+h1, h2, h4 {
+    font-weight: 900;
+    color:rgb(96, 46, 10);
+    text-transform: uppercase;
+    }
+
+    h1 {
+        margin: 30px;
+    }
+
+#turinys {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding: 20px 35px;
+  
+}
+
+
+#ismatavimai {
+    width: 60%;
+}
+
+
+#ismatavimai, #suvestine {
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+  }  
+
+#pasirinkimai {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parametrai {
+    border: 1px solid grey;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 80%;
+    /* padding: 0 20px 0 0; */
+}
+
+select {
+    width: 80%;
+    background-color: rgb(237, 237, 237);
+
+}
+
+#deziu-kiekis {
+    margin: 20px 0;
+    max-width: 200px;
+}
+
+#deziu-kiekis input {
+    margin-top: 5px;
+}
+
+#error {
+    display: none;
+    color: red;
+}
+
+#suvestine {
+    width: 30%;
+}
+
+.suvestinesVienetas {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.suvestinesReiksme {
+    display: flex;
+}
+
+.suvestinesReiksme:last-child {
+    align-items: center;
+}
+
+
+.borderis {
+    border-top:1px solid black;
+}
+
+.rezultatai {
+    font-weight: 900;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+@media all and (max-width: 1920px) {
+    #ismatavimai, #suvestine {
+        height: 550px;
+    }  
+}
+
+@media all and (max-width: 1200px) {
+    #ismatavimai, #suvestine {
+        height: auto;
+        width: 100%;
+    }  
+
+    #turinys {
+        flex-direction: column;
+        gap:20px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    html, body {
+        margin: 10px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #pasirinkimai {
+        flex-direction: column;
+    }
+    .parametrai {
+        width: 100%;
+    }
+}

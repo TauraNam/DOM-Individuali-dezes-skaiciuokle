@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pakavimo dėžių skaičiuoklė</h1>
+    </header>
+    <div id="turinys">
+        <div id="ismatavimai">
+            <h2>Išmatavimai</h2>
+            <h4>Pasirinkite išmatavimus:</h4>
+            <div id="pasirinkimai">
+                <div class="parametrai">
+                    <img class="image" src="img/F201-1-345x345.jpg" alt="deze">
+                    <p>Ilgis</p>
+                    <select id="ilgioPasirinkimas" onchange="ilgioPakeitimas()">
+                        <option value="">Pasirinkite ilgį</option>
+                        <option value="200">200mm</option>
+                        <option value="300">300mm</option>
+                        <option value="440">440mm</option>
+                        <option value="740">740mm</option>
+                    </select>
+                </div>
+                <div class="parametrai">
+                    <img class="image" src="img/F201-1-345x345.jpg">
+                    <p>Plotis</p>
+                    <select id="plocioPasirinkimas" onchange="plocioPakeitimas()">
+                        <option value="">Pasirinkite plotį</option>
+                        <option value="80">80mm</option>
+                        <option value="150">150mm</option>
+                        <option value="170">170mm</option>
+                        <option value="300">300mm</option>
+                    </select>
+                </div>
+                <div class="parametrai">
+                    <img class="image" src="img/F201-1-345x345.jpg">
+                    <p>Aukštis</p>
+                    <select id="aukscioPasirinkimas"onchange="aukscioPakeitimas()">
+                        <option value="">Pasirinkite aukštį</option>
+                        <option value="100">100mm</option>
+                        <option value="110">110mm</option>
+                        <option value="325">325mm</option>
+                        <option value="650">650mm</option>
+                    </select>
+                </div>
+            </div>
+            <div id="deziu-kiekis">
+            <label for="kiekis">Pasirinkite dėžių kiekį:</label>
+            <input type="number" id="kiekis" min="0" step="1" value="0" onchange = "kiekioPakeitimas()">
+            <span id="error">Darbuotoju skaicius negali buti neigiamas.</span>
+            </div>
+        </div>
+        <div id="suvestine">
+            <h2>Suvestinė</h2>
+            <h4>Pakavimo dėžės</h4>
+            <div class="suvestinesVienetas" id="ilgis">
+                <p>Ilgis</p>
+                <div class="suvestinesReiksme">
+                    <p class="rezultatai" id="rezultatas-ilgis"></p>
+                    <p>mm</p>
+                </div>
+            </div>
+            <div class="suvestinesVienetas" id="plotis">
+                <p>Plotis</p>
+                <div class="suvestinesReiksme">
+                <p class="rezultatai" id="rezultatas-plotis"></p>
+                <p>mm</p>
+            </div>
+        </div>
+            <div class="suvestinesVienetas" id="aukstis">
+                <p>Aukštis</p>
+                <div class="suvestinesReiksme">
+                    <p class="rezultatai" id="rezultatas-aukstis"></p>
+                    <p>mm</p>
+                </div>
+            </div>
+            <div class="suvestinesVienetas borderis" id="deziuKiekis">
+                <p>Dėžių kiekis:</p>
+                <div class="suvestinesReiksme">
+                    <p class="rezultatai" id="rezultatas-kiekis"></p>
+                    <p>vnt</p>
+                </div>
+            </div>
+            <div class="suvestinesVienetas borderis" id="kubatura">
+                <p>Kubatūra:</p>
+                <div class="suvestinesReiksme">
+                    <p class="rezultatai" id="rezultatas-kubatura"></p>
+                    <p><span>&#13221</span></p>
+                </div>
+            </div>
+            <div class="suvestinesVienetas" id="viso">
+                <p>Viso</p>
+                <div class="suvestinesReiksme">
+                    <p class="rezultatai" id="rezultatas-viso"></p>
+                    <p style="color:red">+PVM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
